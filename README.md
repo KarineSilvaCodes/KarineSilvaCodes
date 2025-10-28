@@ -1,7 +1,7 @@
 <h1 align="center">Olá, eu sou a Karine Silva! 👋</h1>
 
 <p align="center">
-  <img src="https://media.tenor.com/Qj4_M-31-JAAAAAC/coding-code.gif" width="450">
+  <img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" width="450">
 </p>
 ---
 
