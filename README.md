@@ -46,6 +46,14 @@
 
 ---
 
+---
+
+## 🐍 Minha Cobrinha de Contribuições
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KarineSilvaCodes/KarineSilvaCodes/main/dist/snake.svg" alt="Animação da Cobrinha de Contribuições do GitHub">
+</p>
+
 ## 📊 Minhas Estatísticas no GitHub
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=KarineSilvaCodes&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" alt="Estatísticas do GitHub de KarineSilvaCodes"/>
