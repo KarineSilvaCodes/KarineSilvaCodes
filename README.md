@@ -1,9 +1,8 @@
 <h1 align="center">Olá, eu sou a Karine Silva! 👋</h1>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWFqYXN0eDN0bG91dHV0Z2NqZ3ZubzBxeDFnZzVpdnpxYjR3eWt1biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/programador-programando/giphy.gif" width="450">
+  <img src="https://media.tenor.com/Qj4_M-31-JAAAAAC/coding-code.gif" width="450">
 </p>
-
 ---
 
 ## 👩‍💻 Sobre mim
