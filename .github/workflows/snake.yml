@@ -2,9 +2,9 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    # Roda a cada 12 horas (às 00:00 e 12:00 UTC)
+    # Roda a cada 12 horas
     - cron: '0 */12 * * *'
-
+  
   # Permite que você rode manualmente pela aba "Actions"
   workflow_dispatch:
 
@@ -20,21 +20,20 @@ jobs:
       - name: Generate Snake
         uses: Platane/snk@v3
         with:
-          # Seu nome de usuário do GitHub (ele detecta sozinho)
+          # Seu nome de usuário do GitHub
           github_user_name: ${{ github.repository_owner }}
-
+          
           # Onde salvar o arquivo de saída
           outputs: dist/snake.svg
         env:
           # Token de permissão
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 3. Salva o novo SVG no repositório
-      - name: Push Snake SVG
-        uses: crazy-max/ghaction-github-push@v2
+      # 3. Salva (faz o "commit") do novo arquivo gerado
+      - name: Commit and Push Snake SVG
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: main
-          force: true
-          files: dist/snake.svg
-          message: "chore: update snake animation"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "chore: update snake animation"
+          file_pattern: dist/snake.svg
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
