@@ -1,0 +1,32 @@
+name: Generate Pac-Man Contribution Graph
+
+on:
+  # Isso faz o script rodar todo dia à meia-noite
+  schedule:
+    - cron: "0 0 * * *"
+  # Isso permite que você rode manualmente (vamos usar isso)
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Generate Pac-Man Graph
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate Pac-Man
+        uses: jwenjian/gh-profile-pacman-action@v1.1
+        with:
+          # O ID do seu usuário do GitHub
+          GITHUB_USER: KarineSilvaCodes
+          # A pasta onde a imagem será salva (a mesma que seu README espera)
+          OUTPUT_DIR: output
+
+      - name: Commit & Push
+        run: |
+          git config --global user.name "Pac-Man Bot"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "chore: update pacman contribution graph" || exit 0
+          git push
