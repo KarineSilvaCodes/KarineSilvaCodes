@@ -51,7 +51,6 @@
 ---
 
 ## 👾 Gráfico de Contribuições (Estilo Pac-Man)
-## 👾 Gráfico de Contribuições (Estilo Pac-Man)
 <picture>
   <source 
     media="(prefers-color-scheme: dark)" 
