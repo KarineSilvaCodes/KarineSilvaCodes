@@ -1,12 +1,17 @@
 name: Generate Pac-Man Contribution Graph
 
+# 1. Gatilhos (Quando rodar)
 on:
-  # Isso faz o script rodar todo dia à meia-noite
   schedule:
     - cron: "0 0 * * *"
-  # Isso permite que você rode manualmente (vamos usar isso)
   workflow_dispatch:
 
+# 2. Permissões (O que ele PODE fazer)
+# (Isto estava no lugar errado, agora está certo)
+permissions:
+  contents: write
+
+# 3. Tarefas (O que ele FAZ)
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,13 +19,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+      
       - name: Generate Pac-Man
-        uses: jwenjian/gh-profile-pacman-action@v1.1
+        # (Este é o endereço da "fábrica" corrigido)
+        uses: abozanona/pacman-contribution-graph@main
         with:
-          # O ID do seu usuário do GitHub
           GITHUB_USER: KarineSilvaCodes
-          # A pasta onde a imagem será salva (a mesma que seu README espera)
           OUTPUT_DIR: output
 
       - name: Commit & Push
